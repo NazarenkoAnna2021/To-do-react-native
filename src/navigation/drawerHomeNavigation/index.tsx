@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 import { createDrawerNavigator } from '@react-navigation/drawer';
-import { DrawerContent } from "../../../modules/authentication/UI/components/drawerContent";
+import { DrawerContent } from "../../../modules/toDoRooms/UI/components/drawerContent";
 import { HomePage } from "../../../modules/toDoRooms/UI/screens/homePage";
 
 export const DrawerHomeNavigation: FC = () => {

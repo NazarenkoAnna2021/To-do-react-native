@@ -1,7 +1,8 @@
 import React, { FC, useContext } from "react";
 import { Switch, Text, View } from "react-native";
-import RadioForm, { RadioButton, RadioButtonInput, RadioButtonLabel } from 'react-native-simple-radio-button';
+import RadioForm from 'react-native-simple-radio-button';
 import { LocalizationContext } from "../../../../../src/localization";
+import { ILanguages } from "../../../../../src/localization/entities/ILanguages";
 
 export const DrawerContent: FC = () => {
     const LocalContext = useContext(LocalizationContext);
@@ -17,7 +18,7 @@ export const DrawerContent: FC = () => {
                 <RadioForm
                     radio_props={LocalContext.translations.LANGUAGES_NAMES}
                     initial={LocalContext.language}
-                    onPress={(value: string) => { LocalContext.setLanguage(value) }}
+                    onPress={(value: ILanguages) => { LocalContext.setLanguage(value) }}
                     buttonColor={'#000'}
                     selectedButtonColor={'#000'}
                 />
